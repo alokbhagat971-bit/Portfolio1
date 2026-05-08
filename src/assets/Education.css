@@ -1,0 +1,142 @@
+.education-container {
+  width: 100%;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centered Title with Underline */
+.education-title {
+  position: relative;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+}
+
+.education-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #a855f7;
+  border-radius: 2px;
+}
+
+/* The Main Wrapper */
+.education-item {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  padding-left: 60px; /* Space for the vertical line */
+}
+
+/* The Vertical Line */
+.education-item::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #a855f7;
+}
+
+/* Styling the Degrees as Individual Cards */
+.education-degree {
+  position: relative;
+  background: transparent;
+  border: 1px solid #334155;
+  padding: 20px 30px;
+  border-radius: 12px;
+  color: #c084fc; /* Light purple for degree name */
+  font-size: 1.4rem;
+  margin: 40px 0 0 0; /* Space between cards */
+  transition: 0.3s ease;
+}
+
+/* The Dot/Circle on the Line */
+.education-degree::before {
+  content: "";
+  position: absolute;
+  left: -51px; /* Centers it on the line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #a855f7;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+  z-index: 2;
+}
+
+/* Horizontal connector line from dot to card */
+.education-degree::after {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 50%;
+  width: 31px;
+  height: 1px;
+  background-color: #334155;
+}
+
+/* Institution and Year styling inside/below the card */
+.education-institution {
+  background: transparent;
+  border-left: 1px solid #334155;
+  border-right: 1px solid #334155;
+  padding: 10px 30px;
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.education-year {
+  background: transparent;
+  border-left: 1px solid #334155;
+  border-right: 1px solid #334155;
+  border-bottom: 1px solid #334155;
+  padding: 0 30px 20px 30px;
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Remove borders from the title card so it merges with details */
+.education-degree {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Hover Effect */
+.education-degree:hover,
+.education-degree:hover + .education-institution,
+.education-degree:hover + .education-institution + .education-year {
+  border-color: #a855f7;
+  background-color: rgba(168, 85, 247, 0.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .education-item {
+    padding-left: 40px;
+  }
+  .education-item::before {
+    left: 10px;
+  }
+  .education-degree::before {
+    left: -41px;
+  }
+  .education-degree::after {
+    left: -21px;
+    width: 21px;
+  }
+}

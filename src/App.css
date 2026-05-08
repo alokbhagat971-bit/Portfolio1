@@ -1,0 +1,86 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+
+  background-color: #020617;
+
+  /* Main background effect */
+  background-image:
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.35), transparent 25%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.25), transparent 25%),
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:
+    auto,
+    auto,
+    40px 40px,
+    40px 40px;
+
+  overflow-x: hidden;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 5%;
+  background-color: black;
+
+  z-index: 1000;
+}
+
+.nav-links{
+  display: flex;
+  gap: 25px;
+  list-style: none;
+
+  flex-wrap: wrap;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: #ffd000;
+}
+
+.section{
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 10%;
+  box-sizing: border-box;
+}
+
+.logo{
+  background: linear-gradient(
+    to right,
+    #c084fc,
+    #a855f7,
+    #7c3aed
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}

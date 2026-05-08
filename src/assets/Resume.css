@@ -1,0 +1,83 @@
+.resume-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.resume-left {
+  flex: 1;
+}
+
+.resume-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.resume-text {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* --- The Button --- */
+.resume-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #a855f7;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+.resume-download-button:hover {
+  transform: translateY(-3px);
+  background-color: #9333ea;
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.6);
+}
+
+/* --- The Image Preview --- */
+.resume-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-image-wrapper {
+  background: white; /* Creates the paper-like background */
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease;
+}
+
+.resume-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.resume-preview-img {
+  max-width: 380px; /* Adjust size to fit your design */
+  height: auto;
+  display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .resume-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .resume-text {
+    margin: 0 auto 30px auto;
+  }
+}
